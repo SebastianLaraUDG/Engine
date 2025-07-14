@@ -13,12 +13,13 @@ namespace Math
 		explicit Vector3D(float x = 0.0f, float y = 0.0f, float z = 0.0f) :x(x), y(y), z(z) {}
 
 
-		Vector3D& operator=(const Vector3D& source);
+		//Vector3D& operator=(const Vector3D& source);
 		Vector3D& operator+=(const Vector3D& v2);
 		Vector3D& operator-=(const Vector3D& v2);
 	};
 
-	// Vector assignation
+	/*
+	// Vector assignment
 	inline Vector3D& Vector3D::operator=(const Vector3D& source)
 	{
 		x = source.x;
@@ -26,6 +27,8 @@ namespace Math
 		z = source.z;
 		return *this;
 	}
+	*/
+
 
 	// Vector addition
 	inline Vector3D operator +(const Vector3D& v1, const Vector3D& v2)
