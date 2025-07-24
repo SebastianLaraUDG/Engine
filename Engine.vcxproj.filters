@@ -2,9 +2,17 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="TempCpp.cpp" />
+    <ClCompile Include="Graphics\Shader.cpp" />
+    <ClCompile Include="Graphics\Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\Vector3D.h" />
     <ClInclude Include="Math\Matrix3D.h" />
+    <ClInclude Include="Misc\Typedefs.h" />
+    <ClInclude Include="Math\Matrix4D.h" />
+    <ClInclude Include="Math\Vector4D.h" />
+    <ClInclude Include="Graphics\Shader.h" />
+    <ClInclude Include="Middleware\stb\stb_image.h" />
+    <ClInclude Include="Graphics\Camera.h" />
   </ItemGroup>
 </Project>

@@ -5,6 +5,12 @@
 
 namespace Math
 {
+	/*
+	* It is advised to first do scaling operations,
+	then rotations and lastly translations when
+	combining matrices otherwise they may
+	(negatively) affect each other.
+	*/
 	struct Matrix3D
 	{
 		float r0c0, r0c1, r0c2;
