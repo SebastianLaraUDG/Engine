@@ -10,6 +10,7 @@ namespace Math
 		union { float z, b; };
 
 		Vector3D() :x(0.0f), y(0.0f), z(0.0f) {}
+		Vector3D(float val) : x(val), y(val), z(val) {}
 		explicit Vector3D(float x, float y, float z) :x(x), y(y), z(z) {}
 
 		inline float Magnitude() const;
@@ -106,6 +107,7 @@ namespace Math
 	inline Vector3D& Vector3D::operator -=(const Vector3D& v2)
 	{
 		*this = *this - v2;
+		return *this;
 	}
 
 	// Scaling a vector

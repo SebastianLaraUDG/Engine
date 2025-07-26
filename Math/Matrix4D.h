@@ -174,16 +174,20 @@ namespace Math
 
 	Matrix4D Matrix4D::LookAt(const Vector3D& position, const Vector3D& target, const Vector3D& up)
 	{
-		
+
 		Matrix4D rotationMatrix;
-		
+
 		// Direction or 'forward'
+		// The camera looks INTO the negative Z - axis.
+		// So, the direction vector for the world's Z-axis from the camera's perspective
+		// is from the target to the position.
 		const Vector3D Dir = (position - target).Normalized();
+
 		const Vector3D Right = Vector3D::CrossProduct(up, Dir).Normalized();
 		// This calculates the camera's local Y-axis, ensuring it's orthogonal to Dir and Right.
 		const Vector3D Up = Vector3D::CrossProduct(Dir, Right).Normalized();
 
-		
+
 		rotationMatrix.r0c0 = Right.x;
 		rotationMatrix.r0c1 = Right.y;
 		rotationMatrix.r0c2 = Right.z;
@@ -194,14 +198,14 @@ namespace Math
 		rotationMatrix.r2c1 = Dir.y;
 		rotationMatrix.r2c2 = Dir.z;
 		rotationMatrix.r3c3 = 1.0f;
-		
+
 		Matrix4D translationMatrix = Identity();
 		translationMatrix.r0c3 = -position.x;
 		translationMatrix.r1c3 = -position.y;
 		translationMatrix.r2c3 = -position.z;
 
 		return rotationMatrix * translationMatrix;
-		
+
 
 		/*
 		Vector3D zAxis = (position - target).Normalized(); // Rear view camera
