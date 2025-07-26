@@ -205,34 +205,6 @@ namespace Math
 		translationMatrix.r2c3 = -position.z;
 
 		return rotationMatrix * translationMatrix;
-
-
-		/*
-		Vector3D zAxis = (position - target).Normalized(); // Rear view camera
-		Vector3D xAxis = Vector3D::CrossProduct(up, zAxis).Normalized(); // Right
-		Vector3D yAxis = Vector3D::CrossProduct(zAxis, xAxis); // Corrected up
-
-		Matrix4D view = Identity();
-
-		// Camera orientation
-		view.r0c0 = xAxis.x;
-		view.r0c1 = xAxis.y;
-		view.r0c2 = xAxis.z;
-
-		view.r1c0 = yAxis.x;
-		view.r1c1 = yAxis.y;
-		view.r1c2 = yAxis.z;
-
-		view.r2c0 = zAxis.x;
-		view.r2c1 = zAxis.y;
-		view.r2c2 = zAxis.z;
-
-		view.r0c3 = -xAxis.x * position.x - xAxis.y * position.y - xAxis.z * position.z;
-		view.r1c3 = -yAxis.x * position.x - yAxis.y * position.y - yAxis.z * position.z;
-		view.r2c3 = -zAxis.x * position.x - zAxis.y * position.y - zAxis.z * position.z;
-
-		return view;
-		*/
 	}
 
 	Vector4D Matrix4D::operator*(const Vector4D& vec4) const

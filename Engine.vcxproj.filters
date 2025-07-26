@@ -14,5 +14,6 @@
     <ClInclude Include="Graphics\Shader.h" />
     <ClInclude Include="Middleware\stb\stb_image.h" />
     <ClInclude Include="Graphics\Camera.h" />
+    <ClInclude Include="Graphics\ErrorHandler.h" />
   </ItemGroup>
 </Project>

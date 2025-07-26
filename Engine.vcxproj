@@ -25,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphics\Camera.h" />
+    <ClInclude Include="Graphics\ErrorHandler.h" />
     <ClInclude Include="Math\Matrix3D.h" />
     <ClInclude Include="Math\Matrix4D.h" />
     <ClInclude Include="Math\Vector3D.h" />
